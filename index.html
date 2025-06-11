@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe Sharing Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🍲 Recipe Sharing Website</h1>
+
+    <!-- Auth Section -->
+    <div id="auth-section">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button onclick="signup()">Signup</button>
+      <button onclick="login()">Login</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Recipe Form -->
+    <form id="recipe-form">
+      <input type="text" id="title" placeholder="Recipe Title" required>
+      <textarea id="ingredients" placeholder="Ingredients" required></textarea>
+      <textarea id="instructions" placeholder="Instructions" required></textarea>
+      <button type="submit">Add Recipe</button>
+    </form>
+
+    <h2>📖 Recipes</h2>
+    <div id="recipe-list"></div>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
